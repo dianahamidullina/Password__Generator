@@ -208,11 +208,6 @@ namespace PasswordGenerator
             LabelPasswordLengthValue.Text = TrackBarPasswordLength.Value.ToString();
         }
 
-        private void LabelPasswordLengthValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
 

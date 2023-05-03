@@ -91,7 +91,6 @@
             this.LabelPasswordLengthValue.Size = new System.Drawing.Size(26, 18);
             this.LabelPasswordLengthValue.TabIndex = 6;
             this.LabelPasswordLengthValue.Text = "##";
-            this.LabelPasswordLengthValue.Click += new System.EventHandler(this.LabelPasswordLengthValue_Click);
             // 
             // LabelPasswordLength
             // 
