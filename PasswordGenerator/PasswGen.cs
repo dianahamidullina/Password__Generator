@@ -226,7 +226,7 @@ namespace PasswordGenerator
         }
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
-            saveTextToFile(@".\..\..\SavePasswords.txt", TextBoxGeneratedPassword.Text);
+            saveTextToFile(@".\..\..\Passwords.txt", TextBoxGeneratedPassword.Text);
         }
     }
 
