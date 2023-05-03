@@ -226,12 +226,10 @@ namespace PasswordGenerator
         }
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
-           
-            using (StreamWriter incdate = File.AppendText(@"D:\Passwords.txt"))
-            {
-                incdate.WriteLine(TextBoxGeneratedPassword.Text, '\n');
-            }
 
+            StreamWriter incdate = new StreamWriter(@".\..\..\Passwords.txt", true);
+            incdate.WriteLine(TextBoxGeneratedPassword.Text, '\n');
+            incdate.Close();
         }
     }
 
