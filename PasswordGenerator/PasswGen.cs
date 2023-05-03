@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PasswordGenerator.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace PasswordGenerator
@@ -35,7 +38,7 @@ namespace PasswordGenerator
         public const int USE_SPECIAL_SYMBOLS = 4;
         public const int USE_ENGLISH_MATS = 5;
 
-        public TextBox TextBoxGenerator;
+ 
 
         private void EnableDisableGeneratePasswordButton()
         {
@@ -208,6 +211,22 @@ namespace PasswordGenerator
         private void LabelPasswordLengthValue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveTextToFile(string filename, string textToSave)
+        {
+            try
+            {
+                File.WriteAllText(filename, textToSave);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибко тут: " + ex.Message);
+            }
+        }
+        private void savepasswword_button_Click(object sender, EventArgs e)
+        {
+            saveTextToFile(@".\..\..\SavePasswords.txt", TextBoxGeneratedPassword.Text);
         }
     }
 

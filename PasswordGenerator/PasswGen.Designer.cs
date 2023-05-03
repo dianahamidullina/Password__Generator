@@ -46,6 +46,7 @@
             this.ImageListDefault = new System.Windows.Forms.ImageList(this.components);
             this.ToolTipForControl = new System.Windows.Forms.ToolTip(this.components);
             this.TextBoxGeneratedPassword = new System.Windows.Forms.TextBox();
+            this.savepasswword_button = new System.Windows.Forms.Button();
             this.GroupBoxGenerationParams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarPasswordLength)).BeginInit();
             this.SuspendLayout();
@@ -236,6 +237,20 @@
             this.TextBoxGeneratedPassword.TabIndex = 5;
             this.TextBoxGeneratedPassword.TextChanged += new System.EventHandler(this.TextBoxGeneratedPassword_TextChanged);
             // 
+            // savepasswword_button
+            // 
+            this.savepasswword_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.savepasswword_button.BackColor = System.Drawing.Color.Thistle;
+            this.savepasswword_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.savepasswword_button.Location = new System.Drawing.Point(230, 278);
+            this.savepasswword_button.Name = "savepasswword_button";
+            this.savepasswword_button.Size = new System.Drawing.Size(191, 47);
+            this.savepasswword_button.TabIndex = 6;
+            this.savepasswword_button.Text = "Сохранить пароль ";
+            this.ToolTipForControl.SetToolTip(this.savepasswword_button, "Выйти из программы\r\n");
+            this.savepasswword_button.UseVisualStyleBackColor = false;
+            this.savepasswword_button.Click += new System.EventHandler(this.savepasswword_button_Click);
+            // 
             // PasswGen
             // 
             this.AcceptButton = this.ButtonGeneratePassword;
@@ -244,6 +259,7 @@
             this.BackColor = System.Drawing.Color.Lavender;
             this.CancelButton = this.ButtonExit;
             this.ClientSize = new System.Drawing.Size(784, 396);
+            this.Controls.Add(this.savepasswword_button);
             this.Controls.Add(this.TextBoxGeneratedPassword);
             this.Controls.Add(this.LabelGeneratedPassword);
             this.Controls.Add(this.ButtonExit);
@@ -283,6 +299,7 @@
         public System.Windows.Forms.CheckBox CheckBoxUseSpecialSymbols;
         public System.Windows.Forms.CheckBox CheckBoxEnglisMats;
         public System.Windows.Forms.Button ButtonGeneratePassword;
+        private System.Windows.Forms.Button savepasswword_button;
     }
 }
 

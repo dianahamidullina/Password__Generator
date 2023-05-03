@@ -21,6 +21,7 @@ namespace Tests
            
             //assert
         }
+        [TestMethod]
         public void TestMethod2()
         {
             PasswGen passwGen = new PasswGen();
@@ -32,6 +33,7 @@ namespace Tests
 
             Assert.IsNotNull(button);
         }
+        [TestMethod]
         public void TestMethod3()
         {
             PasswGen passwGen = new PasswGen();
