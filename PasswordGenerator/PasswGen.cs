@@ -227,7 +227,7 @@ namespace PasswordGenerator
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
 
-            StreamWriter incdate = new StreamWriter(@".\..\..\Passwords.txt", true);
+            StreamWriter incdate = new StreamWriter(@".\..\..\SavePasswords.txt", true);
             incdate.WriteLine(TextBoxGeneratedPassword.Text, '\n');
             incdate.Close();
         }
