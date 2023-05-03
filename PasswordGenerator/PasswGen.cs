@@ -42,7 +42,7 @@ namespace PasswordGenerator
 
         private void EnableDisableGeneratePasswordButton()
         {
-            ButtonGeneratePassword.Enabled = CheckBoxUseDigits.Checked || CheckBoxUseLowercaseLetters.Checked || CheckBoxUseUppercaseLetters.Checked || CheckBoxUseSpecialSymbols.Checked || CheckBoxEnglisMats.Checked;
+            ButtonGeneratePassword.Enabled = CheckBoxUseDigits.Checked || CheckBoxUseLowercaseLetters.Checked || CheckBoxUseUppercaseLetters.Checked || CheckBoxUseSpecialSymbols.Checked ;
 
         }
         public PasswGen()
