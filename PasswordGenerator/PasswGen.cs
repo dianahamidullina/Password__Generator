@@ -25,7 +25,7 @@ namespace PasswordGenerator
         /// и использоваться для определения, из какого именно массива мы будем брать очередной 
         /// генерируемый символ пароля:
         /// </summary>
-       
+
         public string[] digits = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
         public string[] lowercaseLetters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         public string[] uppercaseLetters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
@@ -38,12 +38,12 @@ namespace PasswordGenerator
         public const int USE_SPECIAL_SYMBOLS = 4;
         public const int USE_ENGLISH_MATS = 5;
 
- 
+
 
         private void EnableDisableGeneratePasswordButton()
         {
-            ButtonGeneratePassword.Enabled = CheckBoxUseDigits.Checked || CheckBoxUseLowercaseLetters.Checked || CheckBoxUseUppercaseLetters.Checked || CheckBoxUseSpecialSymbols.Checked || CheckBoxEnglisMats.Checked ;
-            
+            ButtonGeneratePassword.Enabled = CheckBoxUseDigits.Checked || CheckBoxUseLowercaseLetters.Checked || CheckBoxUseUppercaseLetters.Checked || CheckBoxUseSpecialSymbols.Checked || CheckBoxEnglisMats.Checked;
+
         }
         public PasswGen()
         {
@@ -72,7 +72,7 @@ namespace PasswordGenerator
         }
         private void enlishMats_CheckedChanged(object sender, EventArgs e)
         {
-           
+
             EnableDisableGeneratePasswordButton();
         }
         private string GetGeneratedPassword(int passwordLength)
@@ -106,7 +106,7 @@ namespace PasswordGenerator
                         sbPassword.Append(specialSymbols[randomSpecialSymbolIndex]);
                         break;
                     case USE_ENGLISH_MATS:
-                        int randomEnglishLetterIndex = random.Next(0 , englishMats.Length);
+                        int randomEnglishLetterIndex = random.Next(0, englishMats.Length);
                         sbPassword.Append(englishMats[randomEnglishLetterIndex]);
                         break;
                 }
@@ -146,7 +146,7 @@ namespace PasswordGenerator
         private void ButtonGeneratePassword_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-           TextBoxGeneratedPassword.Text = englishMats[random.Next(0 , englishMats.Length)];
+            TextBoxGeneratedPassword.Text = englishMats[random.Next(0, englishMats.Length)];
             int passwordLength = TrackBarPasswordLength.Value;
             TextBoxGeneratedPassword.Text = GetGeneratedPassword(passwordLength);
             Clipboard.SetText(TextBoxGeneratedPassword.Text);
@@ -181,7 +181,7 @@ namespace PasswordGenerator
         {
             LoadSettings();
             EnableDisableGeneratePasswordButton();
-           
+
         }
         private void SaveSettingsAndExitApp()
         {
@@ -226,8 +226,13 @@ namespace PasswordGenerator
         }
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
-            saveTextToFile(@".\..\..\Passwords.txt", TextBoxGeneratedPassword.Text);
+           
+            using (StreamWriter incdate = File.AppendText(@"D:\Passwords.txt"))
+            {
+                incdate.WriteLine(TextBoxGeneratedPassword.Text, '\n');
+            }
+
         }
     }
 
-}
+    }
