@@ -213,17 +213,6 @@ namespace PasswordGenerator
 
         }
 
-        private void saveTextToFile(string filename, string textToSave)
-        {
-            try
-            {
-                File.WriteAllText(filename, textToSave);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибко тут: " + ex.Message);
-            }
-        }
         private void savepasswword_button_Click(object sender, EventArgs e)
         {
 
