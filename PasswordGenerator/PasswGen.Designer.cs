@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GroupBoxGenerationParams = new System.Windows.Forms.GroupBox();
-            this.CheckBoxEnglisMats = new System.Windows.Forms.CheckBox();
             this.LabelPasswordLengthValue = new System.Windows.Forms.Label();
             this.LabelPasswordLength = new System.Windows.Forms.Label();
             this.TrackBarPasswordLength = new System.Windows.Forms.TrackBar();
@@ -45,8 +44,8 @@
             this.TimerShowLabelCopiedToClipboard = new System.Windows.Forms.Timer(this.components);
             this.ImageListDefault = new System.Windows.Forms.ImageList(this.components);
             this.ToolTipForControl = new System.Windows.Forms.ToolTip(this.components);
-            this.TextBoxGeneratedPassword = new System.Windows.Forms.TextBox();
             this.savepasswword_button = new System.Windows.Forms.Button();
+            this.TextBoxGeneratedPassword = new System.Windows.Forms.TextBox();
             this.GroupBoxGenerationParams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarPasswordLength)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +53,6 @@
             // GroupBoxGenerationParams
             // 
             this.GroupBoxGenerationParams.BackColor = System.Drawing.Color.Lavender;
-            this.GroupBoxGenerationParams.Controls.Add(this.CheckBoxEnglisMats);
             this.GroupBoxGenerationParams.Controls.Add(this.LabelPasswordLengthValue);
             this.GroupBoxGenerationParams.Controls.Add(this.LabelPasswordLength);
             this.GroupBoxGenerationParams.Controls.Add(this.TrackBarPasswordLength);
@@ -69,18 +67,6 @@
             this.GroupBoxGenerationParams.TabIndex = 0;
             this.GroupBoxGenerationParams.TabStop = false;
             this.GroupBoxGenerationParams.Text = "Параметры генерации пароля";
-            // 
-            // CheckBoxEnglisMats
-            // 
-            this.CheckBoxEnglisMats.AutoSize = true;
-            this.CheckBoxEnglisMats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckBoxEnglisMats.Location = new System.Drawing.Point(18, 139);
-            this.CheckBoxEnglisMats.Name = "CheckBoxEnglisMats";
-            this.CheckBoxEnglisMats.Size = new System.Drawing.Size(172, 22);
-            this.CheckBoxEnglisMats.TabIndex = 7;
-            this.CheckBoxEnglisMats.Text = "Использовать маты";
-            this.CheckBoxEnglisMats.UseVisualStyleBackColor = true;
-            this.CheckBoxEnglisMats.CheckedChanged += new System.EventHandler(this.enlishMats_CheckedChanged);
             // 
             // LabelPasswordLengthValue
             // 
@@ -222,20 +208,6 @@
             this.ImageListDefault.ImageSize = new System.Drawing.Size(16, 16);
             this.ImageListDefault.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // TextBoxGeneratedPassword
-            // 
-            this.TextBoxGeneratedPassword.AcceptsTab = true;
-            this.TextBoxGeneratedPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.TextBoxGeneratedPassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.TextBoxGeneratedPassword.BackColor = System.Drawing.Color.GhostWhite;
-            this.TextBoxGeneratedPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextBoxGeneratedPassword.Location = new System.Drawing.Point(254, 338);
-            this.TextBoxGeneratedPassword.Multiline = true;
-            this.TextBoxGeneratedPassword.Name = "TextBoxGeneratedPassword";
-            this.TextBoxGeneratedPassword.Size = new System.Drawing.Size(254, 46);
-            this.TextBoxGeneratedPassword.TabIndex = 5;
-            this.TextBoxGeneratedPassword.TextChanged += new System.EventHandler(this.TextBoxGeneratedPassword_TextChanged);
-            // 
             // savepasswword_button
             // 
             this.savepasswword_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -249,6 +221,20 @@
             this.ToolTipForControl.SetToolTip(this.savepasswword_button, "Выйти из программы\r\n");
             this.savepasswword_button.UseVisualStyleBackColor = false;
             this.savepasswword_button.Click += new System.EventHandler(this.savepasswword_button_Click);
+            // 
+            // TextBoxGeneratedPassword
+            // 
+            this.TextBoxGeneratedPassword.AcceptsTab = true;
+            this.TextBoxGeneratedPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.TextBoxGeneratedPassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TextBoxGeneratedPassword.BackColor = System.Drawing.Color.GhostWhite;
+            this.TextBoxGeneratedPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBoxGeneratedPassword.Location = new System.Drawing.Point(254, 338);
+            this.TextBoxGeneratedPassword.Multiline = true;
+            this.TextBoxGeneratedPassword.Name = "TextBoxGeneratedPassword";
+            this.TextBoxGeneratedPassword.Size = new System.Drawing.Size(254, 46);
+            this.TextBoxGeneratedPassword.TabIndex = 5;
+            this.TextBoxGeneratedPassword.TextChanged += new System.EventHandler(this.TextBoxGeneratedPassword_TextChanged);
             // 
             // PasswGen
             // 
@@ -296,7 +282,6 @@
         public System.Windows.Forms.CheckBox CheckBoxUseLowercaseLetters;
         public System.Windows.Forms.CheckBox CheckBoxUseDigits;
         public System.Windows.Forms.CheckBox CheckBoxUseSpecialSymbols;
-        public System.Windows.Forms.CheckBox CheckBoxEnglisMats;
         public System.Windows.Forms.Button ButtonGeneratePassword;
         private System.Windows.Forms.Button savepasswword_button;
     }

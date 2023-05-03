@@ -30,13 +30,13 @@ namespace PasswordGenerator
         public string[] lowercaseLetters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         public string[] uppercaseLetters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         public string[] specialSymbols = new string[] { "#", "!", "$", ";", "_", "&", "^", "%", "&", "*", "(", ")", "{", "}", "[", "]" };
-        public string[] englishMats = new string[] { "shit", "crap", "fuck", "fuckaround", "fuckoff", "fuckup" };
+        
 
         public const int USE_DIGITS = 1;
         public const int USE_LOWERCASE_LETTERS = 2;
         public const int USE_UPPERCASE_LETTERS = 3;
         public const int USE_SPECIAL_SYMBOLS = 4;
-        public const int USE_ENGLISH_MATS = 5;
+        
 
 
 
@@ -70,11 +70,7 @@ namespace PasswordGenerator
         {
             EnableDisableGeneratePasswordButton();
         }
-        private void enlishMats_CheckedChanged(object sender, EventArgs e)
-        {
-
-            EnableDisableGeneratePasswordButton();
-        }
+     
         private string GetGeneratedPassword(int passwordLength)
         {
             StringBuilder sbPassword = new StringBuilder();
@@ -105,10 +101,7 @@ namespace PasswordGenerator
                         int randomSpecialSymbolIndex = random.Next(0, specialSymbols.Length);
                         sbPassword.Append(specialSymbols[randomSpecialSymbolIndex]);
                         break;
-                    case USE_ENGLISH_MATS:
-                        int randomEnglishLetterIndex = random.Next(0, englishMats.Length);
-                        sbPassword.Append(englishMats[randomEnglishLetterIndex]);
-                        break;
+                  
                 }
             }
             return sbPassword.ToString();
@@ -131,10 +124,7 @@ namespace PasswordGenerator
             {
                 return true;
             }
-            else if (arrayNumber == USE_ENGLISH_MATS && !CheckBoxEnglisMats.Checked)
-            {
-                return true;
-            }
+           
             return false;
         }
 
@@ -146,7 +136,7 @@ namespace PasswordGenerator
         private void ButtonGeneratePassword_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-            TextBoxGeneratedPassword.Text = englishMats[random.Next(0, englishMats.Length)];
+          
             int passwordLength = TrackBarPasswordLength.Value;
             TextBoxGeneratedPassword.Text = GetGeneratedPassword(passwordLength);
             Clipboard.SetText(TextBoxGeneratedPassword.Text);
@@ -157,7 +147,7 @@ namespace PasswordGenerator
             CheckBoxUseSpecialSymbols.Checked = Settings.Default.IsUseSpecialSymbols;
             CheckBoxUseUppercaseLetters.Checked = Settings.Default.IsUseUppercaseLetters;
             CheckBoxUseLowercaseLetters.Checked = Settings.Default.IsUseLowercaseLetters;
-            CheckBoxEnglisMats.Checked = Settings.Default.IsUseEnglishMats;
+
             TrackBarPasswordLength.Value = Settings.Default.PasswordLength;
 
             UpdatePasswordLengthValue();
@@ -172,7 +162,7 @@ namespace PasswordGenerator
             Settings.Default.IsUseSpecialSymbols = CheckBoxUseSpecialSymbols.Checked;
             Settings.Default.IsUseUppercaseLetters = CheckBoxUseUppercaseLetters.Checked;
             Settings.Default.IsUseLowercaseLetters = CheckBoxUseLowercaseLetters.Checked;
-            Settings.Default.IsUseEnglishMats = CheckBoxEnglisMats.Checked;
+         
             Settings.Default.PasswordLength = TrackBarPasswordLength.Value;
             Settings.Default.Save();
         }
