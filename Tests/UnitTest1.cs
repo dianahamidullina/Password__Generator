@@ -44,6 +44,15 @@ namespace Tests
 
             Assert.IsTrue(containsAtSymbol);
         }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            PasswGen passwGen = new PasswGen;
+
+
+
+        }
+
     }
     
 }
