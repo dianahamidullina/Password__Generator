@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswGen));
             this.GroupBoxGenerationParams = new System.Windows.Forms.GroupBox();
             this.LabelPasswordLengthValue = new System.Windows.Forms.Label();
             this.LabelPasswordLength = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@
             // 
             // GroupBoxGenerationParams
             // 
-            this.GroupBoxGenerationParams.BackColor = System.Drawing.Color.Lavender;
+            this.GroupBoxGenerationParams.BackColor = System.Drawing.Color.Snow;
             this.GroupBoxGenerationParams.Controls.Add(this.LabelPasswordLengthValue);
             this.GroupBoxGenerationParams.Controls.Add(this.LabelPasswordLength);
             this.GroupBoxGenerationParams.Controls.Add(this.TrackBarPasswordLength);
@@ -90,7 +91,7 @@
             // 
             // TrackBarPasswordLength
             // 
-            this.TrackBarPasswordLength.BackColor = System.Drawing.Color.Lavender;
+            this.TrackBarPasswordLength.BackColor = System.Drawing.Color.Snow;
             this.TrackBarPasswordLength.Location = new System.Drawing.Point(321, 182);
             this.TrackBarPasswordLength.Maximum = 30;
             this.TrackBarPasswordLength.Minimum = 5;
@@ -139,18 +140,19 @@
             // CheckBoxUseSpecialSymbols
             // 
             this.CheckBoxUseSpecialSymbols.AutoSize = true;
+            this.CheckBoxUseSpecialSymbols.BackColor = System.Drawing.Color.Snow;
             this.CheckBoxUseSpecialSymbols.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckBoxUseSpecialSymbols.Location = new System.Drawing.Point(18, 35);
             this.CheckBoxUseSpecialSymbols.Name = "CheckBoxUseSpecialSymbols";
             this.CheckBoxUseSpecialSymbols.Size = new System.Drawing.Size(295, 22);
             this.CheckBoxUseSpecialSymbols.TabIndex = 0;
             this.CheckBoxUseSpecialSymbols.Text = "Использовать специальные символы";
-            this.CheckBoxUseSpecialSymbols.UseVisualStyleBackColor = true;
+            this.CheckBoxUseSpecialSymbols.UseVisualStyleBackColor = false;
             this.CheckBoxUseSpecialSymbols.CheckedChanged += new System.EventHandler(this.CheckBoxUseSpecialSymbols_CheckedChanged);
             // 
             // ButtonGeneratePassword
             // 
-            this.ButtonGeneratePassword.BackColor = System.Drawing.Color.Thistle;
+            this.ButtonGeneratePassword.BackColor = System.Drawing.Color.DodgerBlue;
             this.ButtonGeneratePassword.Location = new System.Drawing.Point(12, 278);
             this.ButtonGeneratePassword.Name = "ButtonGeneratePassword";
             this.ButtonGeneratePassword.Size = new System.Drawing.Size(204, 47);
@@ -176,7 +178,7 @@
             // ButtonExit
             // 
             this.ButtonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonExit.BackColor = System.Drawing.Color.Thistle;
+            this.ButtonExit.BackColor = System.Drawing.Color.DodgerBlue;
             this.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonExit.Location = new System.Drawing.Point(629, 338);
             this.ButtonExit.Name = "ButtonExit";
@@ -211,7 +213,7 @@
             // savepasswword_button
             // 
             this.savepasswword_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.savepasswword_button.BackColor = System.Drawing.Color.Thistle;
+            this.savepasswword_button.BackColor = System.Drawing.Color.DodgerBlue;
             this.savepasswword_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.savepasswword_button.Location = new System.Drawing.Point(230, 278);
             this.savepasswword_button.Name = "savepasswword_button";
@@ -241,7 +243,7 @@
             this.AcceptButton = this.ButtonGeneratePassword;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.Snow;
             this.CancelButton = this.ButtonExit;
             this.ClientSize = new System.Drawing.Size(784, 396);
             this.Controls.Add(this.savepasswword_button);
@@ -251,6 +253,7 @@
             this.Controls.Add(this.ButtonClearPassword);
             this.Controls.Add(this.ButtonGeneratePassword);
             this.Controls.Add(this.GroupBoxGenerationParams);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PasswGen";
