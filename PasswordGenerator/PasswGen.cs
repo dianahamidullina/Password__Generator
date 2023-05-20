@@ -202,7 +202,7 @@ namespace PasswordGenerator
         {
 
             StreamWriter incdate = new StreamWriter(@".\..\..\SavePasswords.txt", true);
-            incdate.WriteLine(TextBoxGeneratedPassword.Text, '\n');
+            incdate.WriteLine(TextBoxGeneratedPassword.Text);
             incdate.Close();
         }
     }
